@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"  android:id="@+id/body" android:background="#F0000000" android:layout_height="fill_parent" android:layout_width="fill_parent" android:paddingLeft="20px" android:paddingRight="20px" android:paddingTop="30px" android:paddingBottom="30px">
+
+<ScrollView android:layout_height="wrap_content" android:layout_width="fill_parent" android:id="@+id/scroller" android:layout_centerInParent="true" android:minHeight="120px" android:paddingTop="11px" android:paddingBottom="10px" android:layout_marginRight="0px" android:scrollbarStyle="outsideOverlay" android:fillViewport="true" android:fadingEdge="none" android:fadingEdgeLength="0px">
+<RelativeLayout android:layout_width="fill_parent" android:id="@+id/base" android:layout_height="wrap_content" android:focusable="false" android:background="#0F001010">
+
+</RelativeLayout> 
+</ScrollView>
+
+<ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="fitXY" android:src="@drawable/sun" android:id="@+id/sun" android:layout_alignTop="@+id/scroller" android:adjustViewBounds="true" />
+<ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="fitXY" android:src="@drawable/ground" android:id="@+id/ground" android:layout_alignBottom="@+id/scroller" android:adjustViewBounds="true" />
+
+</RelativeLayout>

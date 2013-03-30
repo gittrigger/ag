@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="fill_parent" android:background="#00000020" android:id="@+id/browser" android:paddingLeft="20px" android:paddingRight="20px" android:paddingTop="0px" android:paddingBottom="0px" android:gravity="center_vertical">
+<ImageView android:id="@+id/browser_sun" android:layout_width="fill_parent" android:layout_height="11px" android:scaleType="fitXY" android:src="@drawable/sun" android:layout_weight="1"  android:visibility="gone"/>
+
+<RelativeLayout android:layout_width="fill_parent" android:id="@+id/base" android:layout_height="wrap_content" android:focusable="false" android:background="#0F001010" android:layout_weight="1" >
+<ScrollView  android:id="@+id/browser_scroll" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scrollbarStyle="insideInset">
+<LinearLayout android:id="@+id/browser_viewer" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+
+</LinearLayout>
+</ScrollView>
+</RelativeLayout>
+<ImageView android:layout_width="fill_parent" android:layout_height="11px" android:scaleType="fitXY" android:src="@drawable/ground" android:layout_weight="1"  android:visibility="gone"/>
+<TextView android:layout_height="wrap_content" android:layout_width="fill_parent" android:id="@+id/browser_title" android:ellipsize="marquee" android:clickable="true" android:lines="1" android:text="Title" android:textSize="32px" android:shadowDx="1"	android:shadowDy="-1" android:shadowColor="#000000" android:shadowRadius="2.2" android:visibility="gone" />
+<TextView android:layout_height="wrap_content" android:layout_width="fill_parent" android:id="@+id/browser_date" android:text="Date" android:textSize="12px" android:textColor="#000000" android:background="#FFFFFF" android:visibility="gone"></TextView>
+
+<!--<ImageView android:id="@+id/browser_overback" android:layout_width="40px" android:layout_height="45px" android:src="@drawable/overback" android:scaleType="matrix" android:layout_alignParentBottom="true" android:layout_alignParentRight="true" />-->
+
+</LinearLayout>

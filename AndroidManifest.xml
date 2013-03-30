@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.havenskys.ag"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <application android:icon="@drawable/icon" android:label="@string/app_name" android:allowTaskReparenting="true">
+        
+        
+                <activity android:name=".Motion"
+                  android:label="@string/app_name" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:multiprocess="true" android:launchMode="singleTop">
+            <intent-filter><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.LAUNCHER" /></intent-filter>
+        </activity>
+
+        <activity android:name="Lookup" android:label="Browser" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:multiprocess="true" android:launchMode="standard">
+            <intent-filter><action android:name="com.havenskys.ag.VIEW" /><category android:name="android.intent.category.DEFAULT" /><data android:mimeType="vnd.android.cursor.item/moment" /></intent-filter>
+        </activity>
+
+        <activity android:name="Detail" android:label="Data" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:multiprocess="true" android:launchMode="standard">
+                <intent-filter><action android:name="com.havenskys.ag.DATA" /><category android:name="android.intent.category.DEFAULT" /></intent-filter>
+        </activity>
+
+        <activity android:name="Space" android:label="Between" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:multiprocess="true" android:launchMode="standard" >
+             <intent-filter><action android:name="com.havenskys.ag.Space" /><category android:name="android.intent.category.DEFAULT" /><data android:mimeType="vnd.android.cursor.item/moment"/></intent-filter>
+        </activity>
+
+        <service android:name=".AutomaticService" android:enabled="true" android:multiprocess="true" />
+
+        <provider android:name="DataProvider" android:authorities="com.havenskys.ag" android:multiprocess="true" />
+        <receiver android:name=".IntentReceiver" android:enabled="true" android:exported="true" android:multiprocess="true">
+              <intent-filter>
+                    <category android:name="android.intent.category.DEFAULT" />
+                    <action android:name="com.havenskys.ag.SERVICE_RECOVER3" />
+                    <action android:name="android.intent.action.BOOT_COMPLETED" />
+                    <action android:name="android.intent.action.SERVICE_STATE" />
+                    <action android:name="android.intent.action.ACTION_SYNC" />
+              </intent-filter>
+         </receiver>
+
+        
+        
+        
+
+    </application>
+
+    <uses-sdk android:minSdkVersion="3" android:targetSdkVersion="7" />
+
+
+<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+<uses-permission android:name="android.permission.WRITE_SETTINGS"></uses-permission>
+<uses-permission android:name="android.permission.VIBRATE"></uses-permission>
+
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+<uses-permission android:name="android.permission.RECEIVE_WAP_PUSH"></uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+
+<uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS"></uses-permission>
+<uses-permission android:name="android.permission.READ_HISTORY_BOOKMARKS"></uses-permission>
+<uses-permission android:name="android.permission.WRITE_HISTORY_BOOKMARKS"></uses-permission>
+<uses-permission android:name="android.permission.SET_ALWAYS_FINISH"></uses-permission>
+
+
+
+</manifest> 
